@@ -2,6 +2,7 @@
 
 # mdast-squeeze-paragraphs
 
+[![Build Status](https://travis-ci.org/eush77/mdast-squeeze-paragraphs.svg)](https://travis-ci.org/eush77/mdast-squeeze-paragraphs)
 [![Dependency Status][david-badge]][david]
 
 Remove empty paragraphs left from other [mdast](http://mdast.js.org) transformations.
