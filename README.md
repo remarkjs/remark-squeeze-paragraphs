@@ -2,20 +2,28 @@
 
 # mdast-squeeze-paragraphs
 
-[![Build Status](https://travis-ci.org/eush77/mdast-squeeze-paragraphs.svg)](https://travis-ci.org/eush77/mdast-squeeze-paragraphs)
-[![Dependency Status][david-badge]][david]
+[![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david]
 
-Remove empty paragraphs left from other [mdast](http://mdast.js.org) transformations.
+Remove empty paragraphs left from other [mdast] transformations.
 
+This module provides both AST transformation and a plugin.
+
+[mdast]: https://github.com/wooorm/mdast
+
+[travis]: https://travis-ci.org/eush77/mdast-squeeze-paragraphs
+[travis-badge]: https://travis-ci.org/eush77/mdast-squeeze-paragraphs.svg
 [david]: https://david-dm.org/eush77/mdast-squeeze-paragraphs
 [david-badge]: https://david-dm.org/eush77/mdast-squeeze-paragraphs.png
 
 ## Example
 
 ```js
+> mdastSqueezeParagraphs = require('mdast-squeeze-paragraphs/plugin')
+
 > mdast.use(mdastStripBadges)
        .process('![](http://img.shields.io/)\n\ntext')
 '\n\ntext\n'
+
 > mdast.use(mdastStripBadges)
        .use(mdastSqueezeParagraphs)
        .process('![](http://img.shields.io/)\n\ntext')
@@ -24,9 +32,13 @@ Remove empty paragraphs left from other [mdast](http://mdast.js.org) transformat
 
 ## API
 
-#### `mdast.use(mdastSqueezeParagraphs)`
+#### `mdastSqueezeParagraphs(ast)`
 
-Remove empty paragraphs from the AST.
+Remove empty paragraphs from the AST. Return the reference to the AST for convenience.
+
+#### `mdast.use(require('mdast-squeeze-paragraphs/plugin'))`
+
+Use this transformation as a plugin.
 
 ## Install
 

@@ -8,7 +8,8 @@
     "test": "tape test/*.js"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "plugin.js"
   ],
   "homepage": "https://github.com/eush77/mdast-squeeze-paragraphs",
   "repository": "eush77/mdast-squeeze-paragraphs",
@@ -32,6 +33,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "clone": "^1.0.2",
     "mdast": "^0.26.2",
     "tape": "^4.0.0"
   }
