@@ -20,7 +20,12 @@
     },
     {
       "type": "paragraph",
-      "children": []
+      "children": [
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
     },
     {
       "type": "paragraph",
