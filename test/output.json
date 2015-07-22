@@ -16,6 +16,14 @@
         {
           "type": "text",
           "value": "second"
+        },
+        {
+          "type": "text",
+          "value": " "
+        },
+        {
+          "type": "text",
+          "value": "value"
         }
       ]
     }

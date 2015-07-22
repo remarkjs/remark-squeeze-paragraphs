@@ -23,7 +23,7 @@
       "children": [
         {
           "type": "text",
-          "value": "\n"
+          "value": ""
         },
         {
           "type": "text",
@@ -36,7 +36,15 @@
       "children": [
         {
           "type": "text",
-          "value": "\nsecond"
+          "value": "second"
+        },
+        {
+          "type": "text",
+          "value": " "
+        },
+        {
+          "type": "text",
+          "value": "value"
         }
       ]
     },
