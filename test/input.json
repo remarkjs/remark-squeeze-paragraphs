@@ -24,6 +24,10 @@
         {
           "type": "text",
           "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "  \n"
         }
       ]
     },
@@ -32,7 +36,7 @@
       "children": [
         {
           "type": "text",
-          "value": "second"
+          "value": "\nsecond"
         }
       ]
     },

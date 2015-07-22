@@ -4,7 +4,9 @@
 
 [![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david]
 
-Remove empty paragraphs left from other [mdast] transformations.
+Remove empty paragraphs and whitespace left from other [mdast] transformations.
+
+Paragraph is considered empty if it is composed from whitespace characters.
 
 This module provides both AST transformation and a plugin.
 
