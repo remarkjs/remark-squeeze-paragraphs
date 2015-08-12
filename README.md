@@ -8,8 +8,6 @@ Remove empty paragraphs left from other [mdast] transformations.
 
 Paragraph is considered empty if it is composed from whitespace characters.
 
-This module provides both AST transformation and a plugin.
-
 [mdast]: https://github.com/wooorm/mdast
 
 [travis]: https://travis-ci.org/eush77/mdast-squeeze-paragraphs
@@ -20,7 +18,7 @@ This module provides both AST transformation and a plugin.
 ## Example
 
 ```js
-> mdastSqueezeParagraphs = require('mdast-squeeze-paragraphs/plugin')
+> mdastSqueezeParagraphs = require('mdast-squeeze-paragraphs')
 
 > mdast.use(mdastStripBadges)
        .process('![](http://img.shields.io/)\n\ntext')
@@ -34,13 +32,19 @@ This module provides both AST transformation and a plugin.
 
 ## API
 
-#### `mdastSqueezeParagraphs(ast)`
+```js
+var mdastSqueezeParagraphs = require('mdast-squeeze-paragraphs');
 
-Remove empty paragraphs from the AST. Return the reference to the AST for convenience.
+mdast.use(mdastSqueezeParagraphs)
+```
 
-#### `mdast.use(require('mdast-squeeze-paragraphs/plugin'))`
+Modifies AST in-place.
 
-Use this transformation as a plugin.
+## CLI
+
+```
+mdast -u mdast-squeeze-paragraphs
+```
 
 ## Install
 
