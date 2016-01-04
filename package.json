@@ -1,7 +1,7 @@
 {
-  "name": "mdast-squeeze-paragraphs",
+  "name": "remark-squeeze-paragraphs",
   "version": "1.1.0",
-  "description": "Remove empty paragraphs left from other mdast transformations",
+  "description": "Remark plugin for removing empty paragraphs",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -10,30 +10,27 @@
   "files": [
     "index.js"
   ],
-  "homepage": "https://github.com/eush77/mdast-squeeze-paragraphs",
-  "repository": "eush77/mdast-squeeze-paragraphs",
+  "homepage": "https://github.com/eush77/remark-squeeze-paragraphs",
+  "repository": "eush77/remark-squeeze-paragraphs",
   "bugs": {
-    "url": "https://github.com/eush77/mdast-squeeze-paragraphs/issues"
+    "url": "https://github.com/eush77/remark-squeeze-paragraphs/issues"
   },
   "keywords": [
-    "mdast",
-    "plugin",
-    "markdown",
-    "squeeze",
-    "remove",
+    "clean",
     "empty",
+    "markdown",
     "paragraph",
-    "whitespace",
-    "ast",
-    "transform",
-    "transformation",
-    "util",
-    "clean"
+    "plugin",
+    "remark",
+    "remove",
+    "squeeze",
+    "whitespace"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "mdast-squeeze-paragraphs": "^3.0.0"
+  },
   "devDependencies": {
-    "clone": "^1.0.2",
-    "mdast": "^0.26.2",
+    "remark": "^3.1.3",
     "tape": "^4.0.0"
   }
 }
