@@ -10,6 +10,6 @@ test(function (t) {
   var input = require('./input');
   var output = require('./output');
 
-  t.deepEqual(remark.use(squeezeParagraphs).run(input), output);
+  t.deepEqual(remark().use(squeezeParagraphs).runSync(input), output);
   t.end();
 });

@@ -21,21 +21,24 @@ Paragraph is considered empty if it is composed of whitespace characters only.
 
 ```js
 var squeezeParagraphs = require('remark-squeeze-paragraphs');
+var stripBadges = require('remark-strip-badges');
 
-remark.use(stripBadges)
-      .process('![](http://img.shields.io/)\n\ntext')
+remark()
+  .use(stripBadges)
+  .processSync('![](http://img.shields.io/)\n\ntext')
 //=> "\n\ntext\n"
 
-remark.use(stripBadges)
-      .use(squeezeParagraphs)
-      .process('![](http://img.shields.io/)\n\ntext')
+remark()
+  .use(stripBadges)
+  .use(squeezeParagraphs)
+  .processSync('![](http://img.shields.io/)\n\ntext')
 //=> "text\n"
 ```
 
 ## API
 
 ```js
-remark.use(squeezeParagraphs)
+remark().use(squeezeParagraphs)
 ```
 
 Modifies AST in-place.
