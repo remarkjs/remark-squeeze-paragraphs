@@ -4,7 +4,7 @@
 
 [![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david]
 
-[Remark] plugin for removing empty paragraphs.
+[Remark][] plugin for removing empty paragraphs.
 
 Paragraph is considered empty if it is composed of whitespace characters only.
 
@@ -51,7 +51,7 @@ remark -u remark-squeeze-paragraphs
 
 ## Related
 
-- [mdast-squeeze-paragraphs] — [mdast] transformation utility that is in the core of this plugin.
+-   [mdast-squeeze-paragraphs][] — [mdast][] transformation utility that is in the core of this plugin.
 
 ## Install
 
