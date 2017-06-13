@@ -9,7 +9,7 @@
 Paragraph is considered empty if it is composed of whitespace characters only.
 
 [remark]: https://github.com/wooorm/remark
-[mdast]: https://github.com/wooorm/mdast
+[mdast]: https://github.com/syntax-tree/mdast
 [mdast-squeeze-paragraphs]: https://github.com/eush77/mdast-squeeze-paragraphs
 
 [travis]: https://travis-ci.org/eush77/remark-squeeze-paragraphs
