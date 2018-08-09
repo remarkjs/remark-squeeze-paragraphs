@@ -1,8 +1,7 @@
-'use strict';
+'use strict'
 
-var squeezeParagraphs = require('mdast-squeeze-paragraphs');
+var squeezeParagraphs = require('mdast-squeeze-paragraphs')
 
-
-module.exports = function () {
-  return squeezeParagraphs;
-};
+module.exports = function() {
+  return squeezeParagraphs
+}

@@ -14,7 +14,6 @@
     "squeeze",
     "whitespace"
   ],
-
   "repository": "eush77/remark-squeeze-paragraphs",
   "bugs": "https://github.com/eush77/remark-squeeze-paragraphs/issues",
   "author": "Eugene Sharygin <eush77@gmail.com>",
@@ -29,10 +28,33 @@
     "mdast-squeeze-paragraphs": "^3.0.0"
   },
   "devDependencies": {
+    "prettier": "^1.14.2",
     "remark": "^9.0.0",
-    "tape": "^4.0.0"
+    "remark-cli": "^5.0.0",
+    "remark-preset-wooorm": "^4.0.0",
+    "tape": "^4.0.0",
+    "xo": "^0.22.0"
   },
   "scripts": {
-    "test": "tape test/*.js"
+    "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+    "test-api": "tape test/*.js",
+    "test": "npm run format && npm run test-api"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "semi": false,
+    "trailingComma": "none"
+  },
+  "xo": {
+    "prettier": true,
+    "esnext": false
+  },
+  "remarkConfig": {
+    "plugins": [
+      "preset-wooorm"
+    ]
   }
 }
