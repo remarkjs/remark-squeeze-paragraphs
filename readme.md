@@ -19,14 +19,14 @@ var squeezeParagraphs = require('remark-squeeze-paragraphs')
 
 remark()
   .use(stripBadges)
-  .processSync('![](http://img.shields.io/)\n\ntext')
+  .processSync('![](https://img.shields.io/)\n\ntext')
   .toString()
 // => "\n\ntext\n"
 
 remark()
   .use(stripBadges)
   .use(squeezeParagraphs)
-  .processSync('![](http://img.shields.io/)\n\ntext')
+  .processSync('![](https://img.shields.io/)\n\ntext')
   .toString()
 // => "text\n"
 ```
