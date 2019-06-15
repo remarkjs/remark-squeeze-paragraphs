@@ -3,3 +3,13 @@ node_js:
   - lts/dubnium
   - node
 after_script: bash <(curl -s https://codecov.io/bash)
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: kUfu3WqecQ9PMUmkkmnD8cgIJ7Bl680Ns4jZBQhvLqZhM6TQtu8Ubfr8I7bZ9tPZfkaNyX4pI7V549INrnCBVkrNlbfTIZ16wVxO6L4n5740yhb1leNY6UfVK2q2+mpIIQBWdIfRDtDoNHFAkTBc7Uz/Ic0YQNon88hiOVAjKrK4adtHXNJFqjeGRAEvFI/t1bgwK1Ezh5ujDvyiasNTgTNRWZLzdZFq+mBh6rWCwn5Ypwqk/CMTQnIj2TY9C33iQFd0QQOvlIkmPhbx/xCUpkmKgn2InvYYYUhTTLHLfWfWFnk4dGwkSU+1ztAlaFIOMsV+ToLzx8DOTwnVjSwKIfgC+nSKWkwLYcvla1oUottQpyoLmRCN/+ToohgChjkkqhClM/LgcfsjVZoruq4UMzFvI7V793nSgOAH6W7HQV6H8qyncPY/JqidRV2v4w4wsxn0lZsk4D8RMCCNHctRSSUxd5Xis1kvnkYLJOsmOiMaVqO4BmFns7c0gRXK+TLt/bWWL/pzJznk0zsi4gla8xpD9aFKW/P2brBTVWVuxVPLrc/KsavPk902Buk8k7/psGEzklShQ6gc37p4m4Dlzg5tVAhCdcME0403eaGJ2lQ/K8r8SP9Wb1KieZdD/KK4ViV2xMafUbzatLWwoT1ibPeIUvUn/02zUgYj+B2ecl0=
+  file:
+    - 'remark-squeeze-paragraphs.js'
+    - 'remark-squeeze-paragraphs.min.js'
+  on:
+    tags: true

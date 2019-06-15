@@ -1,1 +1,8 @@
-/node_modules/
+.DS_Store
+*.log
+.nyc_output/
+coverage/
+node_modules/
+remark-squeeze-paragraphs.js
+remark-squeeze-paragraphs.min.js
+yarn.lock
