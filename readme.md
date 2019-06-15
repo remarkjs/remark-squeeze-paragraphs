@@ -106,4 +106,4 @@ abide by its terms.
 
 [mdast]: https://github.com/syntax-tree/mdast
 
-[mdast-squeeze-paragraphs]: https://github.com/eush77/mdast-squeeze-paragraphs
+[mdast-squeeze-paragraphs]: https://github.com/syntax-tree/mdast-squeeze-paragraphs
