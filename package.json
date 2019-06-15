@@ -1,6 +1,6 @@
 {
   "name": "remark-squeeze-paragraphs",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "remark plugin to remove empty paragraphs",
   "license": "MIT",
   "keywords": [
