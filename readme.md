@@ -3,21 +3,22 @@
 [![Build][build-badge]][build]
 [![Coverage][coverage-badge]][coverage]
 [![Downloads][downloads-badge]][downloads]
-[![Chat][chat-badge]][chat]
+[![Size][size-badge]][size]
 [![Sponsors][sponsors-badge]][collective]
 [![Backers][backers-badge]][collective]
+[![Chat][chat-badge]][chat]
 
-Remove empty (or white-space only) paragraphs with [**remark**][remark].
+[**remark**][remark] plugin to remove empty (or white-space only) paragraphs.
 
-## Installation
+## Install
 
 [npm][]:
 
-```bash
+```sh
 npm install remark-squeeze-paragraphs
 ```
 
-## Usage
+## Use
 
 ```js
 var remark = require('remark')
@@ -40,28 +41,30 @@ remark()
 
 ## API
 
-### `remark.use(squeezeParagraphs)`
+### `remark().use(squeezeParagraphs)`
 
-Transform the tree to remove empty paragraphs.
+Remove empty (or white-space only) paragraphs.
 
 ## Related
 
 *   [`mdast-squeeze-paragraphs`][mdast-squeeze-paragraphs]
-    — [mdast][] transformation utility that is in the core of this plugin.
+    — [**mdast**][mdast] utility that is in the core of this plugin
 
 ## Contribute
 
-See [`contributing.md` in `remarkjs/remark`][contributing] for ways to get
-started.
+See [`contributing.md`][contributing] in [`remarkjs/.github`][health] for ways
+to get started.
+See [`support.md`][support] for ways to get help.
 
-This organisation has a [Code of Conduct][coc].  By interacting with this
-repository, organisation, or community you agree to abide by its terms.
+This project has a [Code of Conduct][coc].
+By interacting with this repository, organisation, or community you agree to
+abide by its terms.
 
 ## License
 
 [MIT][license] © Eugene Sharygin
 
-[build-badge]: https://img.shields.io/travis/remarkjs/remark-squeeze-paragraphs.svg
+[build-badge]: https://img.shields.io/travis/remarkjs/remark-squeeze-paragraphs/master.svg
 
 [build]: https://travis-ci.org/remarkjs/remark-squeeze-paragraphs
 
@@ -73,9 +76,9 @@ repository, organisation, or community you agree to abide by its terms.
 
 [downloads]: https://www.npmjs.com/package/remark-squeeze-paragraphs
 
-[chat-badge]: https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
+[size-badge]: https://img.shields.io/bundlephobia/minzip/remark-squeeze-paragraphs.svg
 
-[chat]: https://spectrum.chat/unified/remark
+[size]: https://bundlephobia.com/result?p=remark-squeeze-paragraphs
 
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
 
@@ -83,13 +86,21 @@ repository, organisation, or community you agree to abide by its terms.
 
 [collective]: https://opencollective.com/unified
 
-[license]: license
+[chat-badge]: https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
+
+[chat]: https://spectrum.chat/unified/rehype
 
 [npm]: https://docs.npmjs.com/cli/install
 
-[contributing]: https://github.com/remarkjs/remark/blob/master/contributing.md
+[health]: https://github.com/remarkjs/.github
 
-[coc]: https://github.com/remarkjs/remark/blob/master/code-of-conduct.md
+[contributing]: https://github.com/remarkjs/.github/blob/master/contributing.md
+
+[support]: https://github.com/remarkjs/.github/blob/master/support.md
+
+[coc]: https://github.com/remarkjs/.github/blob/master/code-of-conduct.md
+
+[license]: license
 
 [remark]: https://github.com/remarkjs/remark
 
