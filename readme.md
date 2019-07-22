@@ -45,6 +45,12 @@ remark()
 
 Remove empty (or white-space only) paragraphs.
 
+## Security
+
+Use of `remark-squeeze-paragraphs` does not involve [**rehype**][rehype]
+([**hast**][hast]) or user content so there are no openings for
+[cross-site scripting (XSS)][xss] attacks.
+
 ## Related
 
 *   [`mdast-squeeze-paragraphs`][mdast-squeeze-paragraphs]
@@ -107,3 +113,9 @@ abide by its terms.
 [mdast]: https://github.com/syntax-tree/mdast
 
 [mdast-squeeze-paragraphs]: https://github.com/syntax-tree/mdast-squeeze-paragraphs
+
+[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
+
+[rehype]: https://github.com/rehypejs/rehype
+
+[hast]: https://github.com/syntax-tree/hast
