@@ -2,6 +2,6 @@
 
 var squeezeParagraphs = require('mdast-squeeze-paragraphs')
 
-module.exports = function() {
+module.exports = function () {
   return squeezeParagraphs
 }

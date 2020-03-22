@@ -5,7 +5,7 @@ var remark = require('remark')
 var u = require('unist-builder')
 var squeezeParagraphs = require('.')
 
-test('remark-squeeze-paragraphs', function(t) {
+test('remark-squeeze-paragraphs', function (t) {
   t.deepEqual(
     remark()
       .use(squeezeParagraphs)
