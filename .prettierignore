@@ -1,3 +1,5 @@
+coverage/
 remark-squeeze-paragraphs.js
 remark-squeeze-paragraphs.min.js
-coverage/
+*.json
+*.md
