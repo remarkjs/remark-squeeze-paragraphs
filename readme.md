@@ -10,6 +10,12 @@
 
 [**remark**][remark] plugin to remove empty (or whitespace only) paragraphs.
 
+## Note!
+
+This plugin is ready for the new parser in remark
+([`remarkjs/remark#536`](https://github.com/remarkjs/remark/pull/536)).
+No change is needed: it works exactly the same now as it did previously!
+
 ## Install
 
 [npm][]:
