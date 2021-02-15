@@ -76,9 +76,9 @@ abide by its terms.
 
 [MIT][license] © Eugene Sharygin
 
-[build-badge]: https://img.shields.io/travis/remarkjs/remark-squeeze-paragraphs.svg
+[build-badge]: https://github.com/remarkjs/remark-squeeze-paragraphs/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/remarkjs/remark-squeeze-paragraphs
+[build]: https://github.com/remarkjs/remark-squeeze-paragraphs/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/remarkjs/remark-squeeze-paragraphs.svg
 
