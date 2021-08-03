@@ -1,6 +1,6 @@
 import test from 'tape'
-import remark from 'remark'
-import u from 'unist-builder'
+import {remark} from 'remark'
+import {u} from 'unist-builder'
 import remarkSqueezeParagraphs from './index.js'
 
 test('remark-squeeze-paragraphs', function (t) {
