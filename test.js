@@ -3,7 +3,7 @@ import {remark} from 'remark'
 import {u} from 'unist-builder'
 import remarkSqueezeParagraphs from './index.js'
 
-test('remark-squeeze-paragraphs', function (t) {
+test('remark-squeeze-paragraphs', (t) => {
   t.deepEqual(
     remark()
       .use(remarkSqueezeParagraphs)
