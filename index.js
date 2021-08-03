@@ -1,7 +1,5 @@
-'use strict'
+import squeezeParagraphs from 'mdast-squeeze-paragraphs'
 
-var squeezeParagraphs = require('mdast-squeeze-paragraphs')
-
-module.exports = function () {
+export default function remarkSqueezeParagraphs() {
   return squeezeParagraphs
 }

@@ -1,14 +1,12 @@
-'use strict'
-
-var test = require('tape')
-var remark = require('remark')
-var u = require('unist-builder')
-var squeezeParagraphs = require('.')
+import test from 'tape'
+import remark from 'remark'
+import u from 'unist-builder'
+import remarkSqueezeParagraphs from './index.js'
 
 test('remark-squeeze-paragraphs', function (t) {
   t.deepEqual(
     remark()
-      .use(squeezeParagraphs)
+      .use(remarkSqueezeParagraphs)
       .runSync(
         u('root', [
           u('paragraph', []),
