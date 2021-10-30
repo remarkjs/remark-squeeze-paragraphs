@@ -8,23 +8,60 @@
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-[**remark**][remark] plugin to remove empty (or whitespace only) paragraphs.
+[**remark**][remark] plugin to remove empty (or white space only) paragraphs.
 
-## Note!
+## Contents
 
-This plugin is ready for the new parser in remark
-([`remarkjs/remark#536`](https://github.com/remarkjs/remark/pull/536)).
-No change is needed: it works exactly the same now as it did previously!
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+    *   [`unified().use(remarkSqueezeParagraphs)`](#unifieduseremarksqueezeparagraphs)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Security](#security)
+*   [Related](#related)
+*   [Contribute](#contribute)
+*   [License](#license)
+
+## What is this?
+
+This package is a [unified][] ([remark][]) plugin to remove empty paragraphs.
+
+**unified** is a project that transforms content with abstract syntax trees
+(ASTs).
+**remark** adds support for markdown to unified.
+**mdast** is the markdown AST that remark uses.
+This is a remark plugin that transforms mdast.
+
+## When should I use this?
+
+This project is mostly useful when you’re using other plugins that remove things
+from the AST (such as [`remark-strip-badges`][remark-strip-badges]).
+You can then use this plugin afterwards to clean stray empty paragraphs.
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c):
-Node 12+ is needed to use it and it must be `import`ed instead of `require`d.
-
-[npm][]:
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
+In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 
 ```sh
 npm install remark-squeeze-paragraphs
+```
+
+In Deno with [Skypack][]:
+
+```js
+import remarkSqueezeParagraphs from 'https://cdn.skypack.dev/remark-squeeze-paragraphs@5?dts'
+```
+
+In browsers with [Skypack][]:
+
+```html
+<script type="module">
+  import remarkSqueezeParagraphs from 'https://cdn.skypack.dev/remark-squeeze-paragraphs@5?min'
+</script>
 ```
 
 ## Use
@@ -34,18 +71,28 @@ import {remark} from 'remark'
 import remarkStripBadges from 'remark-strip-badges'
 import remarkSqueezeParagraphs from 'remark-squeeze-paragraphs'
 
-remark()
-  .use(remarkStripBadges)
-  .processSync('![](https://img.shields.io/)\n\ntext')
-  .toString()
-// => '\n\ntext\n'
+main()
 
-remark()
-  .use(remarkStripBadges)
-  .use(remarkSqueezeParagraphs)
-  .processSync('![](https://img.shields.io/)\n\ntext')
-  .toString()
-// => 'text\n'
+async function main() {
+  console.log(
+    (
+      await remark()
+        .use(remarkStripBadges)
+        .process('![](https://img.shields.io/)\n\ntext')
+    ).toString()
+  )
+  // => '\n\ntext\n'
+
+  console.log(
+    (
+      await remark()
+        .use(remarkStripBadges)
+        .use(remarkSqueezeParagraphs)
+        .process('![](https://img.shields.io/)\n\ntext')
+    ).toString()
+  )
+  // => 'text\n'
+}
 ```
 
 ## API
@@ -55,7 +102,22 @@ The default export is `remarkSqueezeParagraphs`.
 
 ### `unified().use(remarkSqueezeParagraphs)`
 
-Remove empty (or white-space only) paragraphs.
+Remove empty (or white space only) paragraphs.
+There are no options.
+
+## Types
+
+This package is fully typed with [TypeScript][].
+There are no extra exported types.
+
+## Compatibility
+
+Projects maintained by the unified collective are compatible with all maintained
+versions of Node.js.
+As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
+Our projects sometimes work with older versions, but this is not guaranteed.
+
+This plugin works with `unified` version 3+ and `remark` version 4+.
 
 ## Security
 
@@ -66,7 +128,7 @@ Use of `remark-squeeze-paragraphs` does not involve [**rehype**][rehype]
 ## Related
 
 *   [`mdast-squeeze-paragraphs`][mdast-squeeze-paragraphs]
-    — [**mdast**][mdast] utility that is in the core of this plugin
+    — mdast utility with similar functionality
 
 ## Contribute
 
@@ -110,6 +172,8 @@ abide by its terms.
 
 [npm]: https://docs.npmjs.com/cli/install
 
+[skypack]: https://www.skypack.dev
+
 [health]: https://github.com/remarkjs/.github
 
 [contributing]: https://github.com/remarkjs/.github/blob/HEAD/contributing.md
@@ -122,12 +186,16 @@ abide by its terms.
 
 [remark]: https://github.com/remarkjs/remark
 
-[mdast]: https://github.com/syntax-tree/mdast
+[unified]: https://github.com/unifiedjs/unified
 
 [mdast-squeeze-paragraphs]: https://github.com/syntax-tree/mdast-squeeze-paragraphs
 
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
 
+[typescript]: https://www.typescriptlang.org
+
 [rehype]: https://github.com/rehypejs/rehype
 
 [hast]: https://github.com/syntax-tree/hast
+
+[remark-strip-badges]: https://github.com/remarkjs/remark-strip-badges
