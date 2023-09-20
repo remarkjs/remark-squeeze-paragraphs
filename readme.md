@@ -55,14 +55,14 @@ npm install remark-squeeze-paragraphs
 In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import remarkSqueezeParagraphs from 'https://esm.sh/remark-squeeze-paragraphs@5'
+import remarkSqueezeParagraphs from 'https://esm.sh/remark-squeeze-paragraphs@6'
 ```
 
 In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import remarkSqueezeParagraphs from 'https://esm.sh/remark-squeeze-paragraphs@5?bundle'
+  import remarkSqueezeParagraphs from 'https://esm.sh/remark-squeeze-paragraphs@6?bundle'
 </script>
 ```
 
