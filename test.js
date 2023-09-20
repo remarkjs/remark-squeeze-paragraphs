@@ -5,6 +5,12 @@ import {u} from 'unist-builder'
 import remarkSqueezeParagraphs from './index.js'
 
 test('remark-squeeze-paragraphs', async function (t) {
+  await t.test('should expose the public api', async function () {
+    assert.deepEqual(Object.keys(await import('./index.js')).sort(), [
+      'default'
+    ])
+  })
+
   await t.test('should work', async function () {
     assert.deepEqual(
       remark()
