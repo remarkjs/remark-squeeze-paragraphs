@@ -1,14 +1,15 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import {remark} from 'remark'
+import remarkSqueezeParagraphs from 'remark-squeeze-paragraphs'
 import {u} from 'unist-builder'
-import remarkSqueezeParagraphs from './index.js'
 
 test('remark-squeeze-paragraphs', async function (t) {
   await t.test('should expose the public api', async function () {
-    assert.deepEqual(Object.keys(await import('./index.js')).sort(), [
-      'default'
-    ])
+    assert.deepEqual(
+      Object.keys(await import('remark-squeeze-paragraphs')).sort(),
+      ['default']
+    )
   })
 
   await t.test('should work', async function () {
